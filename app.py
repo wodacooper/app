@@ -1,4 +1,3 @@
-st.set_page_config(page_title="PDF Contract Q&A", layout="wide")
 
 from io import BytesIO
 import streamlit as st
@@ -6,7 +5,7 @@ from pathlib import Path
 from rag import PDFRagSystem
 
 st.write("✅ Streamlit app started")
-
+st.set_page_config(page_title="PDF Contract Q&A", layout="wide")
 
 st.title("📄 PA Answering (Local)")
 
@@ -65,3 +64,4 @@ if st.session_state.rag:
         answer = st.session_state.rag.ask(user_q, "")
         st.markdown("### ✅ Answer")
         st.markdown(answer)
+
