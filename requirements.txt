@@ -1,0 +1,21 @@
+# Streamlit web app
+streamlit
+
+# Data manipulation
+pandas
+openpyxl
+
+# PDF handling
+PyPDF2
+
+# Embeddings
+sentence-transformers
+chromadb
+
+# Local LLM
+ollama
+
+# Optional, if you plan to use OCR or images in future
+pillow
+pdf2image
+pytesseract
