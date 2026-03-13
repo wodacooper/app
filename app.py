@@ -1,12 +1,12 @@
-from io import BytesIO
+st.set_page_config(page_title="PDF Contract Q&A", layout="wide")
 
+from io import BytesIO
 import streamlit as st
 from pathlib import Path
 from rag import PDFRagSystem
 
 st.write("✅ Streamlit app started")
 
-st.set_page_config(page_title="PDF Contract Q&A", layout="wide")
 
 st.title("📄 PA Answering (Local)")
 
@@ -15,8 +15,7 @@ Upload a folder of PA's and automatically extract key details.
 Runs fully locally using Ollama.
 """)
 
-# Folder input
-pdf_path = st.text_input("📁 Path to folder containing PA's", value="PAs")
+pdf_path = st.text_input("📁 Path to folder containing PA's", value=str(Path("PA's").resolve()))
 
 if "rag" not in st.session_state:
     st.session_state.rag = None
